@@ -50,14 +50,10 @@
     <proposal_lvm config:type="boolean">false</proposal_lvm>
   </partitioning>
 
-  <update>
-    <system_roles>
-      <insert_system_roles config:type="list">
 	<!-- FATE#317481 -->
 	<system_roles config:type="list">
 	  <system_role>
 	    <id>kvm_host_role</id>
-	    <order config:type="integer">2000</order>
 	    <services config:type="list">
               <service>
 		<name>libvirtd</name>
@@ -72,9 +68,7 @@
 		<name>virtlogd</name>
               </service>
 	    </services>
+	    <order config:type="integer">2000</order>
 	  </system_role>
 	</system_roles>
-      </insert_system_roles>
-    </system_roles>
-  </update>
 </productDefines>
